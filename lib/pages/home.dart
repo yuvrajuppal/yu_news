@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:yu_news/models/category_models.dart';
+import 'package:yu_news/services/data.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -8,6 +10,13 @@ class homepage extends StatefulWidget {
 }
 
 class _homepageState extends State<homepage> {
+  List<CategoryModel> category = [];
+  @override
+  void initState() {
+    category = getcategories();
+    // TODO: implement initState
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +59,8 @@ class _homepageState extends State<homepage> {
               ),
             ),
             SizedBox(height: 10.0),
+
+            // ----------------Hot news list views -------------------
             Container(
               height: MediaQuery.of(context).size.height/2.6,
               child: ListView(
@@ -249,6 +260,10 @@ class _homepageState extends State<homepage> {
                 ],
               ),
             ),
+
+
+
+
           ],
         ),
       ),
