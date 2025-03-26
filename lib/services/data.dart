@@ -31,11 +31,7 @@ List<CategoryModel> getcategories(){
   category.add(categorymodel);
   categorymodel =  new CategoryModel();
 
-   categorymodel.Categoryname="sports";
-  categorymodel.image="images/cricket_cat.jpg";
-  category.add(categorymodel);
-  categorymodel =  new CategoryModel();
-
+   
 
 
   return category;
