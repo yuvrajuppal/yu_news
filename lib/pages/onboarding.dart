@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yu_news/pages/home.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -64,22 +65,27 @@ class _OnboardingState extends State<Onboarding> {
                     child: Material(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       elevation: 6.0,
-                      child: Container(
-                        height: 50,
-               
-                        decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        width: MediaQuery.of(context).size.width,
-                        child: Center(
-                          child: Text(
-                            'Get Started',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold,
+                      child: GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>homepage()));
+                        },
+                        child: Container(
+                          height: 50,
+                                       
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                          ),
+                          width: MediaQuery.of(context).size.width,
+                          child: Center(
+                            child: Text(
+                              'Get Started',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),

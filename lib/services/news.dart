@@ -19,6 +19,7 @@ class News {
             description: element["description"],
             urlToImage: element["urlToImage"],
             title: element["title"],
+            weburl: element["url"],
           );
           news.add(articalmodel);
         }

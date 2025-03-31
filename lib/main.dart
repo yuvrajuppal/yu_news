@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:yu_news/pages/category_news.dart';
 import 'package:yu_news/pages/home.dart';
+import 'package:yu_news/pages/onboarding.dart';
 
 void main(){
   runApp(MyWidget());
@@ -19,7 +21,7 @@ class _MyWidgetState extends State<MyWidget> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: homepage(),
+      home: Onboarding(),
     );
   }
 }
